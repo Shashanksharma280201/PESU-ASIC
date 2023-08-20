@@ -59,4 +59,9 @@ spike -d pk sum1ton.o
 
 ![Screenshot from 2023-08-21 01-20-43](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/ba0825a6-1319-4d7a-a3ec-95b8ebdd2168)
 
-
+### The commands for above porcess are:
+```
+vim unsignedHighest.c
+riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o unsignedHighest.o unsignedHighest.c
+spike pk unsignedHighest.o
+```
