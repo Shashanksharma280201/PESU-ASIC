@@ -65,3 +65,21 @@ vim unsignedHighest.c
 riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o unsignedHighest.o unsignedHighest.c
 spike pk unsignedHighest.o
 ```
+
+## For the signed number 
+
+![Screenshot from 2023-08-21 01-28-57](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/2efbf598-7a24-4f71-a3ba-6a7bc3d41d35)
+
+## After running the compiler
+
+![Screenshot from 2023-08-21 01-28-48](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/0c63fe28-1cc8-476e-adfd-9387bd020663)
+
+
+### The commands for above porcess are:
+
+```
+vim signedHighest.c
+riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o signedHighest.o signedHighest.c
+spike pk signedHighest.o
+```
+
