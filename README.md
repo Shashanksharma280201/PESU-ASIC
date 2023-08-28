@@ -417,7 +417,17 @@ show
 ![Screenshot from 2023-08-28 19-58-39](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/6ef9bfbd-cc97-4161-ae42-6e745a084291)
 
 
+```
+read_verilog dff_async_set.v
+synth -top dff_async_set
+dfflibmap -liberty ../lib//sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
 
+![Screenshot from 2023-08-28 20-03-35](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/57a85d0c-12da-4bba-bd34-67dbba42566f)
+
+![Screenshot from 2023-08-28 20-04-15](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/6bbe419d-7f0f-4b29-a22c-ed2fa0050b9b)
 
 
   
