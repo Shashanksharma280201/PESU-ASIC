@@ -193,6 +193,10 @@ ____System Software____
     cd outdir_spi_slave
     qflow display spi_slave
   ```
+
+  ## Task 1
+
+
   ## Installing sky130RTLDesignAndSynthesis
   ```
     sudo -i
@@ -228,18 +232,62 @@ ____System Software____
 
 ![Screenshot from 2023-08-27 16-17-41](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/0490ef3d-7f7b-4b1b-9b65-0f06b657e42c)
 
-### After the output is generated then execute the .vcd file in the simulator
+  ### After the output is generated then execute the .vcd file in the simulator
 
-```
-gtkflow tb_good_mux.vcd
-```
+  ```
+  gtkwave tb_good_mux.vcd
+  ```
 
 ![Screenshot from 2023-08-27 16-19-54](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/3c87a8d7-83f8-494a-a182-d1488f312531)
 
 ![Screenshot from 2023-08-27 16-20-09](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/68209088-0179-4e87-aa21-7e704ecbd3b2)
 
 ![Screenshot from 2023-08-27 16-29-42](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/f182a6ab-efcf-4dca-84c3-92a3d2dfc366)
+  
+  ```
+  vim tb_good_mux.v -o good_mux.v 
+  ```
+  
+  ## Task 2
 
+  ## Labs using Yosys and Sky130 PDKs
+
+  ### Content of good_mux.v and tb_good_mux.v
+  
+  ![Screenshot from 2023-08-28 13-44-27](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/6a65eed9-0161-4107-b913-8d4427e057ca)
+
+
+
+## Invoke yosys
+![Screenshot from 2023-08-28 13-48-48](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/429395be-d38c-4629-ba7c-b83d5ecfdc3c)
+
+give the commands as mentioned below
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog good_mux.v
+synth -top good_mux 
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![Screenshot from 2023-08-28 13-52-02](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/9b68f04e-7936-4e3a-89da-f010f7005fa2)
+
+![Screenshot from 2023-08-28 13-52-45](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/a393c247-a38c-47e9-939c-3cadf4e6dcf2)
+
+![Screenshot from 2023-08-28 13-53-47](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/9de8304b-a43d-4cb3-a17e-ea344581b7d2)
+
+![Screenshot from 2023-08-28 13-56-31](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/fbea9c3b-6359-4eac-a1a7-22189bd5b418)
+
+![Screenshot from 2023-08-28 13-57-32](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/452f42b0-ac12-40db-a6f2-d52d371898fb)
+
+
+### Write a netlist for the verilog code 
+![Screenshot from 2023-08-28 14-06-54](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/dab4c2ac-4d54-4599-95d4-5c3a84be51e2)
+
+![Screenshot from 2023-08-28 14-08-01](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/ef532e18-84e9-4f0a-bc95-663819259efd)
+
+![Screenshot from 2023-08-28 14-09-37](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/d7ea4dc6-4433-4caa-8a1b-ca9aba881a7b)
+
+![Screenshot from 2023-08-28 14-09-47](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/2bb5b2ba-e035-4758-aff3-a98ab5020710)
 
 </details>
 
