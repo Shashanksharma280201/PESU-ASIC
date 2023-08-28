@@ -170,7 +170,7 @@ ____System Software____
   <summary> Week 2 : Day 1 - Introduction to Verilog RTL design and Synthesis</summary>
   <br>
 
-  # Installation 
+  ## Installation of vsdflow 
 
   ```
   sudo apt-get install git
