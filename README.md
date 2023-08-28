@@ -312,6 +312,49 @@ show
 
 ## Hier synthesis flat synthesis 
 
+### In this section we will be using the multiple_modules.v
+### The commands used are :
+```
+vim multiple_modules.v
+yosys
+read_liberty -lib ../lib//sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog multiple_modules.v
+synth -top multiple_modules
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show multiple_modules
+```
+![Screenshot from 2023-08-28 14-20-26](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/3ce00e90-0d99-4fac-a458-533f3e7a53de)
+
+![Screenshot from 2023-08-28 16-51-43](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/b89671b4-5066-40a3-8278-cdd6dbd7b544)
+
+![Screenshot from 2023-08-28 16-52-28](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/6f8da149-1f00-49be-a35d-e4f4bcc5d71e)
+
+![Screenshot from 2023-08-28 16-52-40](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/3dede933-5b7c-4d13-b5c8-964ca1994087)
+
+![Screenshot from 2023-08-28 16-53-18](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/6457e149-8118-4204-b6dd-d580b3c2f1ce)
+
+```
+write_verilog multiple_modules_hier.v
+!vim multiple_modules_hier.v 
+```
+![Screenshot from 2023-08-28 17-54-14](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/41fad2d2-310f-43d1-a8e0-ac6c8848a2d4)
+
+![Screenshot from 2023-08-28 17-55-32](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/a23db2a1-b896-4bb6-a39b-7111a2e5e0cb)
+
+
+![Screenshot from 2023-08-28 17-55-41](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/94a217d3-4e5b-4523-b36c-615c816f985e)
+
+```
+write_verilog -noattr multiple_modules_hier.v
+!vim multiple_modules_hier.v 
+```
+
+![Screenshot from 2023-08-28 17-56-51](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/d70420b9-a04b-4965-a3b9-79bf6bfbfcad)
+
+
+![Screenshot from 2023-08-28 17-57-01](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/b10ee0a6-b6b1-4feb-b05a-a692b5962210)
+
+
 
 
   
