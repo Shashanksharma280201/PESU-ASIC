@@ -40,16 +40,14 @@ ____System Software____
 - HDL : A program that understands the Binary pattern and map it to a netlist
 - GDS : Layout
 
-
-# Lab sessions 
+# lab classes 
 <details>
-  <summary>Week 1</summary>
+  <summary> week 1 </summary>
   <br>
   <details>
-  <summary>DAY 1: Introduction to RISCV ISA and GNU Compiler Toolchain</summary>
-  <br>
-  
-  # DAY-1: LAB work for RISC-V software toolchain
+    <summary> DAY 1: Introduction to RISCV ISA and GNU Compiler Toolchain </summary>
+    <br>
+    # DAY-1: LAB work for RISC-V software toolchain
   # Task 1
   
   ## Write a C program to compute sum from 1 to n
@@ -132,8 +130,8 @@ ____System Software____
   riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o signedHighest.o signedHighest.c
   spike pk signedHighest.o
   ```
-  
   </details>
+
   <details>
   <summary>DAY 2 : Introduction to ABI and Basic Verification Flow </summary>
   <br>
@@ -165,5 +163,33 @@ ____System Software____
   spike pk 1to9_custom.o
   riscv64-unknown-elf-objdump -d 1to9_custom.o | less
   ```
+</details>
+  
+</details>
+
+<details>
+  <summary> Week 2 </summary>
+  <br>
+ <details>
+    <summary> Day 1 - Introduction to Verilog RTL design and Synthesis </summary>
+     # installation process
+    ## For ubuntu
+   
+    ```
+    sudo apt-get install git
+    git clone https://github.com/kunalg123/vsdflow.git
+    cd vsdflow
+    chmod 777 opensource_eda_tool_install.sh
+    ./opensource_eda_tool_install.sh 
+    **NOTE for freshers : This has been tested on a fresh UBUNTU installtion
+    **NOTE for experienced UNIX users : It has lot of sudo apt-get and sudo remove commands, so you might want to review           before running
+    ./vsdflow spi_slave_design_details.csv
+    ./vsdflow picorv32_design_details.csv
+    ```
+  </details>
+
+  <details>
+    <summary>day 1</summary>
   </details>
 </details>
+
