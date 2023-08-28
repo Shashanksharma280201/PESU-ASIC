@@ -297,11 +297,12 @@ show
 
   ## Introduction to .lib
 
-  ### Command to invoke sky130_fd_sc_hd__tt_025C_1v80.lib file 
+## Task 1
+### Command to invoke sky130_fd_sc_hd__tt_025C_1v80.lib file 
 
-  ```
-   vim ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  ```
+```
+ vim ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
 ![Screenshot from 2023-08-28 14-13-38](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/346d173e-0be2-4ccb-99f5-1db98cdcb35c)
 
 ![Screenshot from 2023-08-28 14-15-59](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/4614462b-c8f6-4a7e-9bba-8d78f114f3cc)
@@ -310,6 +311,7 @@ show
 
 ![Screenshot from 2023-08-28 14-18-04](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/96232c45-5a0a-496d-9d4c-c8dccfbda9b0)
 
+## Task 2
 ## Hier synthesis flat synthesis 
 
 ### In this section we will be using the multiple_modules.v
@@ -355,7 +357,11 @@ write_verilog -noattr multiple_modules_hier.v
 ![Screenshot from 2023-08-28 17-57-01](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/b10ee0a6-b6b1-4feb-b05a-a692b5962210)
 
 
+## Task 3
+
 ## Various Flop Coding Styles and optimization
+
+### For asynchronous reset
 
 ```
 ls
@@ -368,6 +374,48 @@ gtkwave tb_dff_asyncres.vcd
 ![Screenshot from 2023-08-28 19-42-00](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/20c1df08-e42a-4ffc-ab44-322b16e15c9c)
 
 ![Screenshot from 2023-08-28 19-42-21](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/ea55aa6a-0d11-425f-9830-e557f29ae744)
+
+
+### For asynchronous set
+
+```
+iverilog dff_async_set.v tb_dff_async_set.v
+./a.out
+gtkwave tb_dff_async_set.vcd
+```
+
+![image](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/7c2f104e-7808-4a2d-82c6-35de7d76b8e4)
+
+
+### For synchronous reset
+
+```
+iverilog dff_syncres.v tb_dff_syncres.v
+./a.out
+gtkwave tb_dff_syncres.vcd 
+```
+
+![Screenshot from 2023-08-28 19-53-29](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/8c85eb64-bbdf-4fb8-b8c1-32ed3bfecfe8)
+
+
+
+## Task 4
+
+### Now to synthesize all the 3 codes as mentioned above we use yosys
+```
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_asyncres.v
+synth -top dff_asyncres
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib//sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+
+![Screenshot from 2023-08-28 19-58-30](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/13a263c8-d9ad-4300-aae7-c551c7449588)
+
+![Screenshot from 2023-08-28 19-58-39](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/6ef9bfbd-cc97-4161-ae42-6e745a084291)
+
 
 
 
