@@ -40,13 +40,13 @@ ____System Software____
 - HDL : A program that understands the Binary pattern and map it to a netlist
 - GDS : Layout
 
-# lab classes 
+
+
+# Lab Classes 
+
 <details>
-  <summary> Week 1 </summary>
+  <summary> Week 1 : Day 1: Introduction to RISCV ISA and GNU Compiler Toolchain </summary>
   <br>
-  <details>
-    <summary> DAY 1: Introduction to RISCV ISA and GNU Compiler Toolchain </summary>
-    <br>
     # DAY-1: LAB work for RISC-V software toolchain
   # Task 1
   
@@ -130,10 +130,10 @@ ____System Software____
   riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o signedHighest.o signedHighest.c
   spike pk signedHighest.o
   ```
-  </details>
+</details>
 
-  <details>
-  <summary> DAY 2 : Introduction to ABI and Basic Verification Flow </summary>
+<details>
+  <summary> Week 1:  Day 2 - Introduction to ABI and Basic Verification Flow </summary>
   <br>
   
   ## Lab work using ABI function calls
@@ -164,32 +164,31 @@ ____System Software____
   riscv64-unknown-elf-objdump -d 1to9_custom.o | less
   ```
 </details>
-  
-</details>
 
 <details>
-  <summary> Week 2 </summary>
+  <summary> Week 2 : Day 1 - Introduction to Verilog RTL design and Synthesis</summary>
   <br>
- <details>
-    <summary> Day 1 - Introduction to Verilog RTL design and Synthesis </summary>
-     # installation process
-    ## For ubuntu
-   
-    ```
-    sudo apt-get install git
+
+  # Installation 
+
+  ```
+  sudo apt-get install git
     git clone https://github.com/kunalg123/vsdflow.git
     cd vsdflow
     chmod 777 opensource_eda_tool_install.sh
     ./opensource_eda_tool_install.sh 
-    **NOTE for freshers : This has been tested on a fresh UBUNTU installtion
-    **NOTE for experienced UNIX users : It has lot of sudo apt-get and sudo remove commands, so you might want to review           before running
+
+    **NOTE for freshers:** This has been tested on a fresh Ubuntu installation.
+    **NOTE for experienced UNIX users:** It has a lot of `sudo apt-get` and `sudo remove` commands, so you might want to 
+      review before running.
+
     ./vsdflow spi_slave_design_details.csv
     ./vsdflow picorv32_design_details.csv
-    ```
-  </details>
-
-  <details>
-    <summary> Day 2 </summary>
-  </details>
+  ```
 </details>
+
+<details>
+  <summary> Week 2 : DAY 2</summary>
+</details>
+
 
