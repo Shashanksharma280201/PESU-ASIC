@@ -355,6 +355,21 @@ write_verilog -noattr multiple_modules_hier.v
 ![Screenshot from 2023-08-28 17-57-01](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/b10ee0a6-b6b1-4feb-b05a-a692b5962210)
 
 
+## Various Flop Coding Styles and optimization
+
+```
+ls
+ls *dff*
+iverilog dff_asyncres.v tb_dff_asyncres.v
+./a.out
+gtkwave tb_dff_asyncres.vcd 
+```
+
+![Screenshot from 2023-08-28 19-42-00](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/20c1df08-e42a-4ffc-ab44-322b16e15c9c)
+
+![Screenshot from 2023-08-28 19-42-21](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/ea55aa6a-0d11-425f-9830-e557f29ae744)
+
+
 
 
   
