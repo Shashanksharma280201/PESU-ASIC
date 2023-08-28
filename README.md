@@ -42,7 +42,7 @@ ____System Software____
 
 # lab classes 
 <details>
-  <summary> week 1 </summary>
+  <summary> Week 1 </summary>
   <br>
   <details>
     <summary> DAY 1: Introduction to RISCV ISA and GNU Compiler Toolchain </summary>
@@ -133,7 +133,7 @@ ____System Software____
   </details>
 
   <details>
-  <summary>DAY 2 : Introduction to ABI and Basic Verification Flow </summary>
+  <summary> DAY 2 : Introduction to ABI and Basic Verification Flow </summary>
   <br>
   
   ## Lab work using ABI function calls
@@ -189,7 +189,7 @@ ____System Software____
   </details>
 
   <details>
-    <summary>day 1</summary>
+    <summary> Day 2 </summary>
   </details>
 </details>
 
