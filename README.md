@@ -292,7 +292,29 @@ show
 </details>
 
 <details>
-  <summary> Week 2 : Day 2</summary>
+  <summary> Week 2 : Day 2  Timing libs, hierarchical vs flat synthesis and efficient flop coding styles </summary>
+  <br>
+
+  ## Introduction to .lib
+
+  ### Command to invoke sky130_fd_sc_hd__tt_025C_1v80.lib file 
+
+  ```
+   vim ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  ```
+![Screenshot from 2023-08-28 14-13-38](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/346d173e-0be2-4ccb-99f5-1db98cdcb35c)
+
+![Screenshot from 2023-08-28 14-15-59](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/4614462b-c8f6-4a7e-9bba-8d78f114f3cc)
+
+![Screenshot from 2023-08-28 14-16-09](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/85c5d97a-c92b-4772-8c97-765c3c4ba4a1)
+
+![Screenshot from 2023-08-28 14-18-04](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/96232c45-5a0a-496d-9d4c-c8dccfbda9b0)
+
+## Hier synthesis flat synthesis 
+
+
+
+  
 </details>
 
 
