@@ -47,8 +47,9 @@ ____System Software____
 <details>
   <summary> Week 1 : Day 1: Introduction to RISCV ISA and GNU Compiler Toolchain </summary>
   <br>
-    # DAY-1: LAB work for RISC-V software toolchain
-  # Task 1
+
+  # DAY-1: LAB work for RISC-V software toolchain
+  ## Task 1
   
   ## Write a C program to compute sum from 1 to n
   ![Screenshot from 2023-08-19 11-20-30](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/3ee921a8-140c-4353-aac7-104b2f6c5168)
@@ -97,7 +98,7 @@ ____System Software____
   
   
   
-  # Task 2
+  ## Task 2
   
   ## Write a C program for Signed And Unsigned Numbers 
   
@@ -133,7 +134,7 @@ ____System Software____
 </details>
 
 <details>
-  <summary> Week 1:  Day 2 - Introduction to ABI and Basic Verification Flow </summary>
+  <summary> Week 1 : Day 2 - Introduction to ABI and Basic Verification Flow </summary>
   <br>
   
   ## Lab work using ABI function calls
@@ -185,10 +186,65 @@ ____System Software____
     ./vsdflow spi_slave_design_details.csv
     ./vsdflow picorv32_design_details.csv
   ```
+
+  ### Steps to test 'vsdflow' on Ubuntu
+
+  ```
+    cd outdir_spi_slave
+    qflow display spi_slave
+  ```
+  ## Installing sky130RTLDesignAndSynthesis
+  ```
+    sudo -i
+    sudo apt-get install git
+    cd /home
+    ls  
+    cd shashank
+    mkdir VLSI
+    git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git    
+  ```
+  ![Screenshot from 2023-08-27 14-40-07](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/9acda0e5-e202-460e-8383-56832879a9cc)
+
+  ### After installation the VLSI dir should have these files in order 
+  ![Screenshot from 2023-08-27 15-15-44](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/07e2eecd-db77-415f-8c2a-ff78687382fb)
+
+
+  ## Introduction iverilog gtkwave part1
+  ```
+    sudo -i
+    cd /home
+    ls
+    cd shashank
+    cd VLSI
+    cd sky130RTLDesignAndSynthesisWorkshop
+    cd verilog_files
+    ls
+  ```
+
+  ### In this current dir all the verilog files are present with their testbench
+  ### Load a mux and it's testbench into iverilog 
+  
+  ![Screenshot from 2023-08-27 16-17-07](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/b871819e-aa6d-489f-ba5c-911d0398f801)
+
+![Screenshot from 2023-08-27 16-17-41](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/0490ef3d-7f7b-4b1b-9b65-0f06b657e42c)
+
+### After the output is generated then execute the .vcd file in the simulator
+
+```
+gtkflow tb_good_mux.vcd
+```
+
+![Screenshot from 2023-08-27 16-19-54](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/3c87a8d7-83f8-494a-a182-d1488f312531)
+
+![Screenshot from 2023-08-27 16-20-09](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/68209088-0179-4e87-aa21-7e704ecbd3b2)
+
+![Screenshot from 2023-08-27 16-29-42](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/f182a6ab-efcf-4dca-84c3-92a3d2dfc366)
+
+
 </details>
 
 <details>
-  <summary> Week 2 : DAY 2</summary>
+  <summary> Week 2 : Day 2</summary>
 </details>
 
 
