@@ -292,7 +292,7 @@ show
 </details>
 
 <details>
-  <summary> Week 2 : Day 2  Timing libs, hierarchical vs flat synthesis and efficient flop coding styles </summary>
+  <summary> Week 2 : Day 2 - Timing libs, hierarchical vs flat synthesis and efficient flop coding styles </summary>
   <br>
 
   ## Introduction to .lib
@@ -481,6 +481,25 @@ show
 
 ![Screenshot from 2023-08-29 19-59-33](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/1cae9df1-dbcd-4596-b207-0d94e5c9da38)
 
+</details>
 
 
+<details>
+  <summary> Week 2 : Day3 - Combinational and sequential optmizations </summary>
+  <br>
+  
+  ## Task 1
+
+  ![Screenshot from 2023-08-29 20-29-18](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/6ecec5d4-0aa5-46f2-a098-e2f8e1fe6ec5)
+
+ 
+
+
+
+
+
+
+
+
+  
 </details>
