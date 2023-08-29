@@ -45,7 +45,7 @@ ____System Software____
 # Lab Classes 
 
 <details>
-  <summary> Week 1 : Day 1: Introduction to RISCV ISA and GNU Compiler Toolchain </summary>
+  <summary> Week 1 : Day 1 - Introduction to RISCV ISA and GNU Compiler Toolchain </summary>
   <br>
 
   # DAY-1: LAB work for RISC-V software toolchain
@@ -485,7 +485,7 @@ show
 
 
 <details>
-  <summary> Week 2 : Day3 - Combinational and sequential optmizations </summary>
+  <summary> Week 2 : Day 3 - Combinational and sequential optmizations </summary>
   <br>
   
   ## Task 1
