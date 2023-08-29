@@ -442,19 +442,45 @@ show
 
 ![Screenshot from 2023-08-28 20-07-36](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/7159396b-e347-4a92-8530-d2d2cd08f57e)
 
-## L5 Interesting optimisations part1
+## Interesting optimisations part1
 ```
 read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 read_verilog mult_2.v
 synth -top mul2
 abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
 ```
 
 ![Screenshot from 2023-08-29 19-21-21](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/6bbb1f7e-af4b-4104-9695-c126fa5f976e)
 
 ![Screenshot from 2023-08-29 19-25-20](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/3dde5354-f6cd-40db-af54-9fb390c594cf)
 
-  
+## Interesting optimisations part2
+
+```
+write_verilog -noattr mul2_net.v
+show
+```
+![Screenshot from 2023-08-29 19-51-02](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/b7ecb74c-cfb7-4755-81d9-9feb11e72a69)
+
+![Screenshot from 2023-08-29 19-53-28](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/fd70e96a-d1fe-4515-a90a-74b4c4855667)
+
+
+```
+read_verilog mult_8.v
+synth -top mul8
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+write_verilog -noattr mult8_net.v
+show
+```
+
+![Screenshot from 2023-08-29 19-56-10](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/1f390b9d-9789-45cf-aa9c-fa1398da723b)
+
+![Screenshot from 2023-08-29 19-59-20](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/2314a63e-3107-474a-9da3-0616976ac978)
+
+![Screenshot from 2023-08-29 19-59-33](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/1cae9df1-dbcd-4596-b207-0d94e5c9da38)
+
 </details>
 
 
