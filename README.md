@@ -442,7 +442,17 @@ show
 
 ![Screenshot from 2023-08-28 20-07-36](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/7159396b-e347-4a92-8530-d2d2cd08f57e)
 
+## L5 Interesting optimisations part1
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog mult_2.v
+synth -top mul2
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
 
+![Screenshot from 2023-08-29 19-21-21](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/6bbb1f7e-af4b-4104-9695-c126fa5f976e)
+
+![Screenshot from 2023-08-29 19-25-20](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/3dde5354-f6cd-40db-af54-9fb390c594cf)
 
   
 </details>
