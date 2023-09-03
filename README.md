@@ -686,16 +686,23 @@ gtkwave tb_bad_mux.vcd
 
 
 ### Synthesize bad_mux.v using yosys and generate a bad_mux_net.v netlist 
-### After that simulate using gtkwave 
+### After that simulate using iverilog 
 
 ![Screenshot from 2023-09-03 14-06-19](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/890d6e07-d2d2-4da7-a298-8ca2058a2901)
 
 # Task 3  Lab on synth-sim mismatch for blocking statement
 
+### First run the simulation using the iverilog 
 
+![Screenshot from 2023-09-03 14-11-16](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/dd62f5df-ddf4-45f9-a11f-74a012fbb93f)
 
+### Generate the netlist using yosys blocking_caveat_net.v
 
+![Screenshot from 2023-09-03 14-14-13](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/5e98f8df-1cd2-4c43-b8a9-b06390397b4e)
 
+### Using the gtkwave view the wave form
+
+![Screenshot from 2023-09-03 14-17-21](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/c59f7516-8eab-460c-90fa-aa27a337d2bd)
 
   
 </details>
