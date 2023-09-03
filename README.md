@@ -514,7 +514,9 @@ show
   ![Screenshot from 2023-09-03 10-02-01](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/df68275d-3089-4d88-9bd6-aed2753fd9fa)
   
   ![Screenshot from 2023-09-03 10-03-58](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/79c8fdcf-1973-4546-aa62-2eef7be2b1be)
-  
+
+
+  ### Synthesis
 
 ```
 read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
@@ -544,6 +546,8 @@ show
 
 ![Screenshot from 2023-09-03 10-31-07](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/e70925ad-d766-4a99-95dd-23e9bf0fcbd7)
 
+### Synthesis
+
 ```
 vim dff_const1.v -o dff_const2.v
 iverilog dff_const1.v  tb_dff_const1.v
@@ -559,6 +563,8 @@ gtkwave tb_dff_const2.vcd
 
 ![Screenshot from 2023-09-03 10-35-01](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/6685cbcc-6b9b-4358-a51b-fe77e9f39091)
 
+### Synthesis
+
 ```
 yosys
 
@@ -572,6 +578,8 @@ show
 
 ![Screenshot from 2023-09-03 10-40-09](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/34ee59d9-e558-439b-ba3d-37079b3218d8)
 
+### Synthesis
+
 ```
 read_verilog dff_const2.v
 synth -top dff_const2
@@ -582,6 +590,8 @@ show
 ![Screenshot from 2023-09-03 10-43-56](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/9b0519e7-bc23-463a-a51e-396eb5c09d4a)
 
 
+### Gtkwave
+
 ```
 iverilog dff_const3.v tb_dff_const3.v
 ./a.out
@@ -589,6 +599,24 @@ gtkwave tb_dff_const3.vcd
 ```
 
 ![Screenshot from 2023-09-03 10-46-37](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/a0aac26d-5510-4011-9113-f2ac2e4c9f12)
+
+### Synthesis
+
+```
+yosys
+read_verilog dff_const3.v
+synth -top dff_const3
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+
+![Screenshot from 2023-09-03 11-35-22](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/9607832e-15c1-415c-aba3-66eb3924972f)
+
+
+# Task 3 
+
+
 
 
 
