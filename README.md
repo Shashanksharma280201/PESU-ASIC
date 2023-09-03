@@ -631,6 +631,15 @@ show
 
 
 
+```
+cp counter_opt.v counter_opt2.v
+vim  counter_opt2.v
+```
+
+![Screenshot from 2023-09-03 11-45-19](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/cdfa6c38-776f-44e5-acd3-45f784acb165)
+
+![Screenshot from 2023-09-03 11-51-49](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/ebe53583-7f5b-4dbc-ad36-5536e3b6b417)
+
 
 
 </details>
