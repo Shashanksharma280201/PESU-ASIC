@@ -44,8 +44,10 @@ ____System Software____
 
 # Lab Classes 
 
+# Week 1
+
 <details>
-  <summary> Week 1 : Day 1 - Introduction to RISCV ISA and GNU Compiler Toolchain </summary>
+  <summary> Day 1 - Introduction to RISCV ISA and GNU Compiler Toolchain </summary>
   <br>
 
   # DAY-1: LAB work for RISC-V software toolchain
@@ -134,7 +136,7 @@ ____System Software____
 </details>
 
 <details>
-  <summary> Week 1 : Day 2 - Introduction to ABI and Basic Verification Flow </summary>
+  <summary> Day 2 - Introduction to ABI and Basic Verification Flow </summary>
   <br>
   
   ## Lab work using ABI function calls
@@ -166,8 +168,10 @@ ____System Software____
   ```
 </details>
 
+# Week 2
+
 <details>
-  <summary> Week 2 : Day 1 - Introduction to Verilog RTL design and Synthesis</summary>
+  <summary> Day 1 - Introduction to Verilog RTL design and Synthesis</summary>
   <br>
 
   ## Installation of vsdflow 
@@ -292,7 +296,7 @@ show
 </details>
 
 <details>
-  <summary> Week 2 : Day 2 - Timing libs, hierarchical vs flat synthesis and efficient flop coding styles </summary>
+  <summary> Day 2 - Timing libs, hierarchical vs flat synthesis and efficient flop coding styles </summary>
   <br>
 
   ## Introduction to .lib
@@ -485,7 +489,7 @@ show
 
 
 <details>
-  <summary> Week 2 : Day 3 - Combinational and sequential optmizations </summary>
+  <summary> Day 3 - Combinational and sequential optmizations </summary>
   <br>
   
   ## Task 1
