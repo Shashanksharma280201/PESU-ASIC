@@ -614,8 +614,20 @@ show
 ![Screenshot from 2023-09-03 11-35-22](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/9607832e-15c1-415c-aba3-66eb3924972f)
 
 
-# Task 3 
+# Task 3  Sequential logic optimizations for unused outputs 
 
+### synthesis
+
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog  counter_opt.v
+synth -top counter_opt
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+
+![Screenshot from 2023-09-03 11-42-25](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/46334447-a8d2-4378-b66f-de71c351e279)
 
 
 
