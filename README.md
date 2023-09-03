@@ -636,10 +636,67 @@ cp counter_opt.v counter_opt2.v
 vim  counter_opt2.v
 ```
 
-![Screenshot from 2023-09-03 11-45-19](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/cdfa6c38-776f-44e5-acd3-45f784acb165)
-
-![Screenshot from 2023-09-03 11-51-49](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/ebe53583-7f5b-4dbc-ad36-5536e3b6b417)
+![Screenshot from 2023-09-03 11-56-41](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/0c33b43a-c7e0-4f31-aaa1-a216ae3cd9d7)
 
 
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog counter_opt2.v
+synth -top counter_opt
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.li
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+
+![Screenshot from 2023-09-03 11-55-33](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/2df6cad3-addc-4135-998e-de6b3d5ed284)
 
 </details>
+
+
+
+<details>
+  <summary> Day 4 - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch </summary>
+  <br>
+
+# Task 1 Labs on GLS and Synthesis-Simulation Mismatch
+
+```
+vim ternary_operator_mux.v -o bad_mux.v -o good_mux.v
+iverilog ternary_operator_mux.v tb_ternary_operator_mux.v
+./a.out
+gtkwave tb_ternary_operator_mux.vcd
+```
+![Screenshot from 2023-09-03 13-42-14](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/4eb705cc-1513-461a-909c-cca62179031b)
+
+![Screenshot from 2023-09-03 13-43-43](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/6a1d3d43-077b-4117-b3c6-375a793972a3)
+
+![Screenshot from 2023-09-03 13-50-10](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/09cdd5c5-935d-49dd-8557-3434ddd290da)
+
+![Screenshot from 2023-09-03 13-54-16](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/275c57fc-8d2b-4676-ac56-47ae76b505f4)
+
+
+
+```
+iverilog bad_mux.v  tb_bad_mux.v
+./a.out
+gtkwave tb_bad_mux.vcd
+```
+
+![Screenshot from 2023-09-03 13-59-21](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/3b44dfd0-9981-4d2c-b262-b02cbd79d66c)
+
+
+### Synthesize bad_mux.v using yosys and generate a bad_mux_net.v netlist 
+### After that simulate using gtkwave 
+
+![Screenshot from 2023-09-03 14-06-19](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/890d6e07-d2d2-4da7-a298-8ca2058a2901)
+
+# Task 3  Lab on synth-sim mismatch for blocking statement
+
+
+
+
+
+
+  
+</details>
+
