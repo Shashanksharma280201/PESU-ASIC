@@ -492,18 +492,105 @@ show
   <summary> Day 3 - Combinational and sequential optmizations </summary>
   <br>
   
-  ## Task 1
+  ## Task 1  Combinational logic optimizations
 
   ![Screenshot from 2023-08-29 20-29-18](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/6ecec5d4-0aa5-46f2-a098-e2f8e1fe6ec5)
 
- 
-
-
-
-
-
-
-
-
+  ### Commands
   
+  ```
+  read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  read_verilog opt_check.v
+  synth -top opt_check 
+  opt_clean -purge
+  abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  show
+  read_verilog opt_check2.v
+  synth -top opt_check2
+  abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+  show
+  ```
+  
+  ![Screenshot from 2023-09-03 10-02-01](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/df68275d-3089-4d88-9bd6-aed2753fd9fa)
+  
+  ![Screenshot from 2023-09-03 10-03-58](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/79c8fdcf-1973-4546-aa62-2eef7be2b1be)
+  
+
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+read_verilog opt_check3.v
+synth -top opt_check3
+opt_clean -purge
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+read_verilog opt_check4.v
+synth -top opt_check4
+opt_clean -purge
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+
+
+![Screenshot from 2023-09-03 10-10-02](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/f9df9b6c-23e0-483d-85e3-5229fbd26024)
+
+![Screenshot from 2023-09-03 10-11-19](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/790b9f99-b57d-4d08-9676-3bdfc916fd61)
+
+
+## Task 2  Sequential logic optimizations
+
+
+![Screenshot from 2023-09-03 10-30-00](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/a4e9e107-4843-4efa-8164-0c9e3d81237c)
+
+
+![Screenshot from 2023-09-03 10-31-07](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/e70925ad-d766-4a99-95dd-23e9bf0fcbd7)
+
+```
+vim dff_const1.v -o dff_const2.v
+iverilog dff_const1.v  tb_dff_const1.v
+./a.out
+gtkwave tb_dff_const1.vcd
+iverilog dff_const2.v  tb_dff_const2.v
+./a.out
+gtkwave tb_dff_const2.vcd 
+```
+
+
+![Screenshot from 2023-09-03 10-33-52](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/f2a54282-a82b-45ab-a2cd-0a61c02ff67a)
+
+![Screenshot from 2023-09-03 10-35-01](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/6685cbcc-6b9b-4358-a51b-fe77e9f39091)
+
+```
+yosys
+
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_const1.v
+synth -top dff_const1
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+
+![Screenshot from 2023-09-03 10-40-09](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/34ee59d9-e558-439b-ba3d-37079b3218d8)
+
+```
+read_verilog dff_const2.v
+synth -top dff_const2
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+
+![Screenshot from 2023-09-03 10-43-56](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/9b0519e7-bc23-463a-a51e-396eb5c09d4a)
+
+
+```
+iverilog dff_const3.v tb_dff_const3.v
+./a.out
+gtkwave tb_dff_const3.vcd 
+```
+
+![Screenshot from 2023-09-03 10-46-37](https://github.com/Shashanksharma280201/PESU-ASIC/assets/79470436/a0aac26d-5510-4011-9113-f2ac2e4c9f12)
+
+
+
+
 </details>
